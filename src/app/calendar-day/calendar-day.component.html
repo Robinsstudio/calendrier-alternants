@@ -1,0 +1,9 @@
+<div id="container">
+	<div *ngIf="day.date" class="date">{{ day.date }}</div>
+	<div *ngIf="day.apprentices" class="day">
+		<div
+			*ngFor="let apprentice of day.apprentices"
+			class="apprentice {{ apprentice }}">
+		</div>
+	</div>
+</div>

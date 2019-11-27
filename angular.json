@@ -5,7 +5,14 @@
   "projects": {
     "calendrier-alternants": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "lintFix": true
+        },
+        "@schematics/angular:service": {
+          "lintFix": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

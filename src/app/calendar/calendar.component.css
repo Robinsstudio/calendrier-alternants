@@ -1,0 +1,31 @@
+#title {
+	font-size: var(--title-font-size);
+}
+
+#month {
+	font-size: var(--month-font-size);
+	margin: var(--month-margin);
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#calendar {
+	font-family: 'Helvetica';
+	font-size: var(--font-size);
+
+	display: grid;
+	grid-template-columns: repeat(7, var(--cell-size));
+	grid-template-rows: var(--cell-size);
+	grid-gap: var(--cell-gap);
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}

@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+	font-family: Helvetica;
+}
+	
+:root {
+	--title-font-size: 5vmin;
+	--month-font-size: 4vmin;
+
+	--month-margin: 5vmin;
+
+	--cell-size: 7vmin;
+	--cell-color: rgb(215, 215, 215);
+	--cell-gap: 2vmin;
+	--font-size: 2vmin;
+
+	--sub-cell-size: 2vmin;
+
+	--robin-color: rgb(219, 0, 50);
+	--yacine-color: rgb(255, 73, 176);
+	--julie-color: rgb(122, 95, 196);
+	--jean-christophe-color: rgb(255, 232, 22);
+	--romain-color: rgb(42, 208, 61);
+}

@@ -1,0 +1,50 @@
+#container {
+	display: flex;
+	flex-direction: column;
+}
+
+.day {
+	position: relative;
+
+	width: var(--cell-size);
+	height: var(--cell-size);
+	background-color: var(--cell-color);
+}
+
+.apprentice {
+	position: absolute;
+
+	width: var(--sub-cell-size);
+	height: var(--sub-cell-size);
+}
+
+.Robin {
+	top: 0%;
+	left: 0%;
+	background-color: var(--robin-color);
+}
+
+.Yacine {
+	top: 0%;
+	right: 0%;
+	background-color: var(--yacine-color);
+}
+
+.Julie {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--julie-color);
+}
+
+.Jean-Christophe {
+	bottom: 0%;
+	left: 0%;
+	background-color: var(--jean-christophe-color);
+}
+
+.Romain {
+	bottom: 0%;
+	right: 0%;
+	background-color: var(--romain-color);
+}

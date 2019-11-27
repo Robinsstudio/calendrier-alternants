@@ -1,0 +1,23 @@
+<div id="container">
+	<div id="title">Calendrier des alternants</div>
+	<div id="month">
+		<fa-icon
+			[icon]="faArrowLeft"
+			(click)="goToPreviousMonth()"
+		></fa-icon>
+			{{ months[month] }} {{ year }}
+		<fa-icon
+			[icon]="faArrowRight"
+			(click)="goToNextMonth()"
+		></fa-icon>
+	</div>
+	<div id="calendar">
+		<div class="header" *ngFor="let header of headers">
+			<span>{{ header }}</span>
+		</div>
+		<app-calendar-day
+			*ngFor="let day of days"
+			[day]="day">
+		</app-calendar-day>
+	</div>
+</div>
