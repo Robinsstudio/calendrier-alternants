@@ -3,10 +3,12 @@
 }
 	
 :root {
-	--title-font-size: 5vmin;
-	--month-font-size: 4vmin;
+	--title-one-font-size: 4vmin;
+	--title-two-font-size: 3vmin;
 
-	--month-margin: 5vmin;
+	--space-one: 5vmin;
+	--space-two: 4vmin;
+	--space-three: 3vmin;
 
 	--cell-size: 7vmin;
 	--cell-color: rgb(215, 215, 215);

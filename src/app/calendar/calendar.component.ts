@@ -13,6 +13,7 @@ export class CalendarComponent implements OnInit {
 
 	months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
 	headers = ['lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim'];
+	apprentices;
 	month;
 	year;
 	days;
@@ -22,6 +23,8 @@ export class CalendarComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
+		this.apprentices = this.apprenticeService.getApprentices();
+
 		const date = new Date();
 		this.month = date.getMonth();
 		this.year = date.getFullYear();

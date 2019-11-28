@@ -1,17 +1,12 @@
-#title {
-	font-size: var(--title-font-size);
+:host {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #month {
-	font-size: var(--month-font-size);
-	margin: var(--month-margin);
-}
-
-#container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	font-size: var(--title-two-font-size);
+	margin: var(--space-one);
 }
 
 #calendar {
@@ -24,8 +19,49 @@
 	grid-gap: var(--cell-gap);
 }
 
-.header {
+.calendar-header {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+}
+
+#caption {
+	align-self: flex-start;
+	margin-top: var(--space-two);
+}
+
+#caption-title {
+	font-size: var(--title-two-font-size);
+	margin-bottom: var(--space-three);
+}
+
+.caption-text {
+	display: inline-block;
+	padding: 1vmin;
+}
+
+.Robin, .Yacine, .Julie, .Jean-Christophe, .Romain {
+	display: inline-block;
+	width: var(--sub-cell-size);
+	height: var(--sub-cell-size);
+}
+
+.Robin {
+	background-color: var(--robin-color);
+}
+
+.Yacine {
+	background-color: var(--yacine-color);
+}
+
+.Julie {
+	background-color: var(--julie-color);
+}
+
+.Jean-Christophe {
+	background-color: var(--jean-christophe-color);
+}
+
+.Romain {
+	background-color: var(--romain-color);
 }

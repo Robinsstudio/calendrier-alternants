@@ -4,21 +4,22 @@ import { Injectable } from '@angular/core';
 	providedIn: 'root'
 })
 export class ApprenticeService {
+	apprentices = ['Robin', 'Yacine', 'Julie', 'Jean-Christophe', 'Romain'];
 	data;
 
  	constructor() {
-		const apprentices = ['Robin', 'Yacine', 'Julie', 'Jean-Christophe', 'Romain'];
 		this.data = Array.from({ length: 31 }, (_, i) => {
 			return {
-			date: i + 1,
-			month: 1,
-			year: 2020,
-			apprentices: this.shuffle(apprentices).slice(0, Math.floor(Math.random() * (apprentices.length + 1)))
+				date: i + 1,
+				month: 1,
+				year: 2020,
+				apprentices: this.shuffle(this.apprentices).slice(0, Math.floor(Math.random() * (this.apprentices.length + 1)))
 			};
 		});
 	}
 
-	shuffle(array) {
+	shuffle(arr) {
+		const array = arr.slice();
 		let j, x, i;
 		for (i = array.length - 1; i > 0; i--) {
 			j = Math.floor(Math.random() * (i + 1));
@@ -31,5 +32,9 @@ export class ApprenticeService {
 
 	getData() {
 		return this.data;
+	}
+
+	getApprentices() {
+		return this.apprentices;
 	}
 }
