@@ -1,13 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class ApprenticeService {
-	apprentices = ['Robin', 'Yacine', 'Julie', 'Jean-Christophe', 'Romain'];
+	apprentices;
 	data;
 
- 	constructor() {
+	 constructor(
+		 private http: HttpClient
+	 ) {
+		this.apprentices = ['Robin', 'Yacine', 'Julie', 'Jean-Christophe', 'Romain'];
 		this.data = Array.from({ length: 31 }, (_, i) => {
 			return {
 				date: i + 1,
@@ -16,7 +20,7 @@ export class ApprenticeService {
 				apprentices: this.shuffle(this.apprentices).slice(0, Math.floor(Math.random() * (this.apprentices.length + 1)))
 			};
 		});
-	}
+	 }
 
 	shuffle(arr) {
 		const array = arr.slice();
